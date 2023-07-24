@@ -1,0 +1,703 @@
+{
+	"formatVersion": 4,
+	"modifications": [
+		{
+			"modification": "createEnum",
+			"enumName": "FileType",
+			"values": [
+				"pdf",
+				"video",
+				"audio",
+				"image",
+				"text"
+			]
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "User",
+				"unique": [],
+				"indexes": [],
+				"primary": "id",
+				"primaryColumn": "id",
+				"tableName": "user",
+				"eventLog": {
+					"enabled": true
+				},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"type": "Uuid",
+						"columnType": "uuid",
+						"nullable": false
+					}
+				}
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Course",
+				"unique": [],
+				"indexes": [],
+				"primary": "id",
+				"primaryColumn": "id",
+				"tableName": "course",
+				"eventLog": {
+					"enabled": true
+				},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"type": "Uuid",
+						"columnType": "uuid",
+						"nullable": false
+					}
+				}
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "CourseMaterial",
+				"unique": [],
+				"indexes": [],
+				"primary": "id",
+				"primaryColumn": "id",
+				"tableName": "course_material",
+				"eventLog": {
+					"enabled": true
+				},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"type": "Uuid",
+						"columnType": "uuid",
+						"nullable": false
+					}
+				}
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "File",
+				"unique": [],
+				"indexes": [],
+				"primary": "id",
+				"primaryColumn": "id",
+				"tableName": "file",
+				"eventLog": {
+					"enabled": true
+				},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"type": "Uuid",
+						"columnType": "uuid",
+						"nullable": false
+					}
+				}
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Assignment",
+				"unique": [],
+				"indexes": [],
+				"primary": "id",
+				"primaryColumn": "id",
+				"tableName": "assignment",
+				"eventLog": {
+					"enabled": true
+				},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"type": "Uuid",
+						"columnType": "uuid",
+						"nullable": false
+					}
+				}
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "personId",
+				"columnName": "person_id",
+				"type": "Uuid",
+				"nullable": true,
+				"columnType": "uuid"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "name",
+				"columnName": "name",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "email",
+				"columnName": "email",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Course",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Course",
+			"field": {
+				"name": "description",
+				"columnName": "description",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "CourseMaterial",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "CourseMaterial",
+			"field": {
+				"name": "description",
+				"columnName": "description",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "CourseMaterial",
+			"field": {
+				"name": "fileType",
+				"columnName": "file_type",
+				"type": "Enum",
+				"nullable": false,
+				"columnType": "FileType"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "url",
+				"columnName": "url",
+				"type": "String",
+				"nullable": false,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "size",
+				"columnName": "size",
+				"type": "Integer",
+				"nullable": true,
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"type": "String",
+				"nullable": true,
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "name",
+				"columnName": "name",
+				"type": "String",
+				"nullable": true,
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "createdAt",
+				"columnName": "created_at",
+				"type": "DateTime",
+				"nullable": false,
+				"columnType": "timestamptz",
+				"default": "now"
+			},
+			"fillValue": "now"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Assignment",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Assignment",
+			"field": {
+				"name": "description",
+				"columnName": "description",
+				"type": "String",
+				"nullable": true,
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Assignment",
+			"field": {
+				"name": "dueDate",
+				"columnName": "due_date",
+				"type": "Date",
+				"nullable": true,
+				"columnType": "date"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Assignment",
+			"field": {
+				"name": "grade",
+				"columnName": "grade",
+				"type": "Integer",
+				"nullable": true,
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "User",
+			"owningSide": {
+				"type": "ManyHasMany",
+				"name": "enrolledCourses",
+				"target": "Course",
+				"inversedBy": "students",
+				"joiningTable": {
+					"tableName": "user_enrolled_courses",
+					"joiningColumn": {
+						"columnName": "user_id",
+						"onDelete": "cascade"
+					},
+					"inverseJoiningColumn": {
+						"columnName": "course_id",
+						"onDelete": "cascade"
+					},
+					"eventLog": {
+						"enabled": true
+					}
+				}
+			},
+			"inverseSide": {
+				"type": "ManyHasMany",
+				"name": "students",
+				"target": "User",
+				"ownedBy": "enrolledCourses"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Course",
+			"owningSide": {
+				"type": "ManyHasOne",
+				"name": "instructor",
+				"target": "User",
+				"inversedBy": "courses",
+				"joiningColumn": {
+					"columnName": "instructor_id",
+					"onDelete": "restrict"
+				},
+				"nullable": true
+			},
+			"inverseSide": {
+				"type": "OneHasMany",
+				"name": "courses",
+				"target": "Course",
+				"ownedBy": "instructor"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "CourseMaterial",
+			"owningSide": {
+				"type": "ManyHasOne",
+				"name": "file",
+				"target": "File",
+				"inversedBy": "coursematerialFile",
+				"nullable": true,
+				"joiningColumn": {
+					"columnName": "file_id",
+					"onDelete": "set null"
+				}
+			},
+			"inverseSide": {
+				"type": "OneHasMany",
+				"name": "coursematerialFile",
+				"target": "CourseMaterial",
+				"ownedBy": "file"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "CourseMaterial",
+			"owningSide": {
+				"type": "ManyHasOne",
+				"name": "course",
+				"target": "Course",
+				"inversedBy": "courseMaterials",
+				"joiningColumn": {
+					"columnName": "course_id",
+					"onDelete": "restrict"
+				},
+				"nullable": true
+			},
+			"inverseSide": {
+				"type": "OneHasMany",
+				"name": "courseMaterials",
+				"target": "CourseMaterial",
+				"ownedBy": "course"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Assignment",
+			"owningSide": {
+				"type": "ManyHasOne",
+				"name": "course",
+				"target": "Course",
+				"inversedBy": "assignments",
+				"joiningColumn": {
+					"columnName": "course_id",
+					"onDelete": "restrict"
+				},
+				"nullable": true
+			},
+			"inverseSide": {
+				"type": "OneHasMany",
+				"name": "assignments",
+				"target": "Assignment",
+				"ownedBy": "course"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Assignment",
+			"owningSide": {
+				"type": "ManyHasOne",
+				"name": "student",
+				"target": "User",
+				"inversedBy": "submittedAssignments",
+				"joiningColumn": {
+					"columnName": "student_id",
+					"onDelete": "restrict"
+				},
+				"nullable": true
+			},
+			"inverseSide": {
+				"type": "OneHasMany",
+				"name": "submittedAssignments",
+				"target": "Assignment",
+				"ownedBy": "student"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "User",
+			"unique": {
+				"fields": [
+					"personId",
+					"email"
+				],
+				"name": "unique_User_personId_email"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/instructor",
+					"value": {
+						"variables": {
+							"personId": {
+								"type": "predefined",
+								"value": "personID"
+							}
+						},
+						"stages": "*",
+						"entities": {
+							"User": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"personId": true,
+										"name": true,
+										"email": true,
+										"enrolledCourses": true,
+										"courses": true,
+										"submittedAssignments": true
+									}
+								}
+							},
+							"Course": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"title": true,
+										"description": true,
+										"instructor": true,
+										"students": true,
+										"courseMaterials": true,
+										"assignments": true
+									},
+									"update": {
+										"title": true,
+										"description": true,
+										"instructor": true,
+										"students": true,
+										"courseMaterials": true,
+										"assignments": true
+									},
+									"create": {
+										"title": true,
+										"description": true,
+										"instructor": true,
+										"students": true,
+										"courseMaterials": true,
+										"assignments": true
+									}
+								}
+							},
+							"CourseMaterial": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"title": true,
+										"description": true,
+										"fileType": true,
+										"file": true,
+										"course": true
+									},
+									"update": {
+										"title": true,
+										"description": true,
+										"fileType": true,
+										"file": true,
+										"course": true
+									},
+									"create": {
+										"title": true,
+										"description": true,
+										"fileType": true,
+										"file": true,
+										"course": true
+									}
+								}
+							},
+							"Assignment": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"title": true,
+										"description": true,
+										"dueDate": true,
+										"course": true,
+										"student": true,
+										"grade": true
+									},
+									"update": {
+										"title": true,
+										"description": true,
+										"dueDate": true,
+										"course": true,
+										"student": true,
+										"grade": true
+									},
+									"create": {
+										"title": true,
+										"description": true,
+										"dueDate": true,
+										"course": true,
+										"student": true,
+										"grade": true
+									}
+								}
+							},
+							"File": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"url": true,
+										"size": true,
+										"type": true,
+										"name": true,
+										"createdAt": true,
+										"coursematerialFile": true
+									},
+									"edit": {
+										"url": true,
+										"size": true,
+										"type": true,
+										"name": true,
+										"createdAt": true,
+										"coursematerialFile": true
+									},
+									"create": {
+										"url": true,
+										"size": true,
+										"type": true,
+										"name": true,
+										"createdAt": true,
+										"coursematerialFile": true
+									}
+								}
+							}
+						},
+						"s3": {
+							"**": {
+								"upload": true,
+								"read": true
+							}
+						}
+					}
+				},
+				{
+					"op": "add",
+					"path": "/roles/student",
+					"value": {
+						"variables": {
+							"personId": {
+								"type": "predefined",
+								"value": "personID"
+							}
+						},
+						"stages": "*",
+						"entities": {
+							"User": {
+								"predicates": {
+									"predicateUserstudent ": {
+										"personId": "personId"
+									}
+								},
+								"operations": {
+									"read": {
+										"personId": "predicateUserstudent ",
+										"name": "predicateUserstudent ",
+										"email": "predicateUserstudent ",
+										"enrolledCourses": "predicateUserstudent ",
+										"courses": "predicateUserstudent ",
+										"submittedAssignments": "predicateUserstudent "
+									},
+									"update": {
+										"personId": "predicateUserstudent ",
+										"name": "predicateUserstudent ",
+										"email": "predicateUserstudent ",
+										"enrolledCourses": "predicateUserstudent ",
+										"courses": "predicateUserstudent ",
+										"submittedAssignments": "predicateUserstudent "
+									}
+								}
+							},
+							"Assignment": {
+								"predicates": {
+									"predicateAssignmentstudent ": {
+										"student": {
+											"personId": "personId"
+										}
+									}
+								},
+								"operations": {
+									"read": {
+										"title": "predicateAssignmentstudent ",
+										"description": "predicateAssignmentstudent ",
+										"dueDate": "predicateAssignmentstudent ",
+										"course": "predicateAssignmentstudent ",
+										"student": "predicateAssignmentstudent ",
+										"grade": "predicateAssignmentstudent "
+									},
+									"update": {
+										"title": "predicateAssignmentstudent ",
+										"description": "predicateAssignmentstudent ",
+										"dueDate": "predicateAssignmentstudent ",
+										"course": "predicateAssignmentstudent ",
+										"student": "predicateAssignmentstudent ",
+										"grade": "predicateAssignmentstudent "
+									},
+									"create": {
+										"title": "predicateAssignmentstudent ",
+										"description": "predicateAssignmentstudent ",
+										"dueDate": "predicateAssignmentstudent ",
+										"course": "predicateAssignmentstudent ",
+										"student": "predicateAssignmentstudent ",
+										"grade": "predicateAssignmentstudent "
+									}
+								}
+							},
+							"File": {
+								"predicates": {},
+								"operations": {}
+							}
+						},
+						"s3": {
+							"**": {
+								"upload": true,
+								"read": true
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}
