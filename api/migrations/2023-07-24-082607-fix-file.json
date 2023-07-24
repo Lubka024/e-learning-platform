@@ -1,0 +1,223 @@
+{
+	"formatVersion": 5,
+	"modifications": [
+		{
+			"modification": "removeIndexNames"
+		},
+		{
+			"modification": "removeUniqueConstraint",
+			"entityName": "User",
+			"fields": [
+				"personId",
+				"email"
+			]
+		},
+		{
+			"modification": "updateColumnDefinition",
+			"entityName": "File",
+			"fieldName": "type",
+			"definition": {
+				"columnType": "text",
+				"nullable": true,
+				"type": "String"
+			}
+		},
+		{
+			"modification": "updateColumnDefinition",
+			"entityName": "File",
+			"fieldName": "name",
+			"definition": {
+				"columnType": "text",
+				"nullable": true,
+				"type": "String"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "remove",
+					"path": "/roles/instructor/entities/File/operations/edit"
+				},
+				{
+					"op": "remove",
+					"path": "/roles/student/entities/File"
+				},
+				{
+					"op": "remove",
+					"path": "/roles/student/entities/User/predicates/predicateUserstudent "
+				},
+				{
+					"op": "add",
+					"path": "/roles/student/entities/User/predicates/personId_personId",
+					"value": {
+						"personId": "personId"
+					}
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/read/personId",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/read/name",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/read/email",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/read/enrolledCourses",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/read/courses",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/read/submittedAssignments",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/update/personId",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/update/name",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/update/email",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/update/enrolledCourses",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/update/courses",
+					"value": "personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/User/operations/update/submittedAssignments",
+					"value": "personId_personId"
+				},
+				{
+					"op": "remove",
+					"path": "/roles/student/entities/Assignment/predicates/predicateAssignmentstudent "
+				},
+				{
+					"op": "add",
+					"path": "/roles/student/entities/Assignment/predicates/student_personId_personId",
+					"value": {
+						"student": {
+							"personId": "personId"
+						}
+					}
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/read/title",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/read/description",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/read/dueDate",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/read/course",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/read/student",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/read/grade",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/update/title",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/update/description",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/update/dueDate",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/update/course",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/update/student",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/update/grade",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/create/title",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/create/description",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/create/dueDate",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/create/course",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/create/student",
+					"value": "student_personId_personId"
+				},
+				{
+					"op": "replace",
+					"path": "/roles/student/entities/Assignment/operations/create/grade",
+					"value": "student_personId_personId"
+				}
+			]
+		}
+	]
+}
