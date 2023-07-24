@@ -11,8 +11,8 @@ import { CourseMaterial } from './CourseMaterial'
 export class File {
 	url = def.stringColumn().notNull()
 	size = def.intColumn()
-	type = def.stringColumn().columnType('integer')
-	name = def.stringColumn().columnType('integer')
+	type = def.stringColumn()
+	name = def.stringColumn()
 	createdAt = def.dateTimeColumn().notNull().default('now')
 	coursematerialFile = def.oneHasMany(CourseMaterial, 'file')
 }
